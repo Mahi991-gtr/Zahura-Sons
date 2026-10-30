@@ -48,14 +48,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .links{display:flex;align-items:center;gap:clamp(16px,2vw,34px)}
 .links a{position:relative;font:500 14.5px/1 Barlow,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 0;border-bottom:2px solid transparent;transition:border-color .25s ease,color .25s ease}
 
-/* Desktop: transparent over the photo with the logo on a white plate, then a solid light bar once you scroll */
+/* Desktop: original-color transparent logo over the photo, then a solid light bar once you scroll */
 @media(min-width:1100px){
   .bar{padding:0 clamp(24px,3.2vw,56px)}
+  .site-header.top .bar{padding:28px clamp(24px,3.2vw,56px) 18px}
   .links a{color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.55)}
   .links a:hover,.links a.on{border-color:var(--sky)}
-  .site-header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:190px;background:linear-gradient(rgba(8,11,14,.6),rgba(8,11,14,0));pointer-events:none}
+  .site-header.top::before{content:"";position:absolute;left:0;right:0;top:0;height:210px;background:linear-gradient(rgba(8,11,14,.6),rgba(8,11,14,0));pointer-events:none}
   .site-header.top .brand{background:transparent;padding:0;box-shadow:none}
-  .site-header.top .brand .logo-stack{filter:brightness(0) invert(1)}
   .site-header:not(.top){background:var(--hdr);box-shadow:0 1px 0 var(--hdr-line),0 10px 28px rgba(16,20,23,.08)}
   .site-header:not(.top) .bar{height:84px}
   .site-header:not(.top) .brand .logo-stack{display:none}
